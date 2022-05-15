@@ -1,0 +1,10 @@
+[package]
+name = "solarian-repairs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+clap = { version = "3.1.13", features = ["derive"] }
+mpl-token-metadata = "1"
+solana-client = "1"
+solana-sdk = "1"
