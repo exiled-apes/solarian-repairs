@@ -28,11 +28,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     for mint_address in mints_missing_metadata {
         let mint_address = mint_address.parse().unwrap();
         match find_or_create_metadata_account(rpc, signer, mint_address) {
-            Some(_) => todo!(),
-            None => eprintln!("TODO create metadata account for {}\n", mint_address),
+            Some(_) => eprintln!("{} Okay", mint_address),
+            None => eprintln!("{} Fail", mint_address),
         }
     }
-
     Ok(())
 }
 
